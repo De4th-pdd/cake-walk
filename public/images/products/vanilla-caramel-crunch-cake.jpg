@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8E7" />
+      <stop offset="50%" stop-color="#FDE4CF" />
+      <stop offset="100%" stop-color="#E6BA95" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.45" />
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <!-- Bakery subtle geometric pattern -->
+  <circle cx="400" cy="270" r="180" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2" stroke-dasharray="6,6"/>
+  <circle cx="400" cy="270" r="140" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5"/>
+
+  <!-- Center Presentation Platter -->
+  <ellipse cx="400" cy="360" rx="200" ry="40" fill="#000000" opacity="0.35" filter="url(#shadow)"/>
+  <ellipse cx="400" cy="350" rx="170" ry="25" fill="#ffffff" opacity="0.18"/>
+
+  <!-- Central Icon & Illustration -->
+  <g filter="url(#shadow)">
+    <circle cx="400" cy="260" r="85" fill="#ffffff" opacity="0.95"/>
+    <circle cx="400" cy="260" r="78" fill="none" stroke="#B77A4C" stroke-width="2" opacity="0.6"/>
+    <text x="400" y="278" font-size="70" text-anchor="middle" dominant-baseline="central">🍰</text>
+  </g>
+
+  <!-- Brand Signature Header -->
+  <g opacity="0.9">
+    <rect x="260" y="40" width="280" height="34" rx="17" fill="#241714" opacity="0.75"/>
+    <text x="400" y="62" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#F7F1E8" text-anchor="middle" letter-spacing="3">CAKE WALK</text>
+    <text x="400" y="76" font-family="'Courier New', monospace" font-size="9" fill="#B77A4C" text-anchor="middle" letter-spacing="4">BY AYSHA</text>
+  </g>
+
+  <!-- Product Tag Badge -->
+  <g filter="url(#shadow)">
+    <rect x="230" y="390" width="340" height="36" rx="18" fill="#B77A4C" opacity="0.95"/>
+    <text x="400" y="413" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">CHIFFON SPONGE</text>
+  </g>
+
+  <!-- Product Name & Subtitle -->
+  <g filter="url(#shadow)">
+    <text x="400" y="475" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">Vanilla Caramel Crunch Cake</text>
+    <text x="400" y="515" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#F7F1E8" text-anchor="middle" opacity="0.9">Salted Caramel Drip &amp; Honey Crunch</text>
+  </g>
+
+  <!-- Elegant Footer Flourish -->
+  <line x1="280" y1="550" x2="520" y2="550" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1"/>
+  <circle cx="400" cy="550" r="3" fill="#ffffff" opacity="0.6"/>
+</svg>
