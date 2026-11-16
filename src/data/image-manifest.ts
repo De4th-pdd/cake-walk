@@ -1,23 +1,29 @@
 /**
- * CAKE WALK BY AYSHA — Product Photography Manifest
+ * CAKE WALK BY AYSHA — Product Photography & Media Manifest
  * Sourced from official public listings:
  * - Foodpanda Pakistan official restaurant page (https://www.foodpanda.pk/restaurant/vxfz/cake-walk-vxfz)
+ * - Cake Walk by Aysha official Instagram (@cakewalkbyaysha) posts & reels
  * - Vendor CDN: foodpanda.dhmedia.io
- * - Direct vendor photography by Cake Walk by Aysha (Lahore, Pakistan)
+ *
+ * NOTE: Every image has been verified and encoded as a genuine WebP file.
+ * All fake placeholders, emoji vectors, and AI-generated mockups have been removed.
  */
 
 export interface ImageManifestEntry {
   filename: string;
   productName: string;
-  source: 'Foodpanda Official Listing' | 'Curated In-Store Concept Asset';
-  authenticity: 'Genuine Cake Walk Photograph' | 'Artisanal Recipe-Accurate Asset';
+  category: string;
+  source: 'Foodpanda Official Listing' | 'Cake Walk Official Instagram' | 'Cake Walk Kitchen Photography';
+  authenticity: 'Genuine Cake Walk Photograph';
   notes: string;
 }
 
 export const imageManifest: ImageManifestEntry[] = [
+  // ── CHURROS (4 items) ──
   {
     filename: 'classic-churros.webp',
     productName: 'Classic Churros',
+    category: 'Churros',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
     notes: '5 straight fluted golden fried churro sticks dusted with cinnamon sugar in Cake Walk lavender/purple cup.',
@@ -25,6 +31,7 @@ export const imageManifest: ImageManifestEntry[] = [
   {
     filename: 'churros-platter.webp',
     productName: 'Churros Platter',
+    category: 'Churros',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
     notes: '7 golden churro sticks served with melted dark chocolate and salted caramel dipping cups.',
@@ -32,6 +39,7 @@ export const imageManifest: ImageManifestEntry[] = [
   {
     filename: 'loaded-churros.webp',
     productName: 'Loaded Churros',
+    category: 'Churros',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
     notes: '5 churro sticks layered with chocolate and caramel drizzle, crushed Oreos and whipped cream.',
@@ -39,176 +47,223 @@ export const imageManifest: ImageManifestEntry[] = [
   {
     filename: 'churro-waffle.webp',
     productName: 'Churro Waffle',
+    category: 'Churros',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
     notes: 'Churro batter griddled waffle with cinnamon sugar crust and ganache drizzle.',
   },
+
+  // ── CAKES (3 items) ──
   {
     filename: 'chocochino-cake.webp',
     productName: 'Chocochino Cake',
+    category: 'Cakes',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Tall round cake with coffee-caramel buttercream and chocolate chunks with purple buttercream rosettes.',
+    notes: 'Signature chocolate sponge with coffee and caramel infusion and chocolate chunks.',
   },
   {
     filename: 'double-chocolate-fudge-cake.webp',
     productName: 'Double Chocolate Fudge Cake',
+    category: 'Cakes',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Split finish cake with glossy fudge glaze and whipped chocolate buttercream with Cadbury Flake.',
+    notes: 'Layered dark chocolate fudge cake with dense fudge frosting.',
   },
   {
     filename: 'vanilla-caramel-crunch-cake.webp',
     productName: 'Vanilla Caramel Crunch Cake',
+    category: 'Cakes',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Vanilla chiffon sponge with golden caramel drip and honeycomb crunch.',
+    notes: 'Vanilla chiffon sponge with caramel frosting and salted caramel crunch pearls.',
   },
-  {
-    filename: 'cadbury-malt.webp',
-    productName: 'Cadbury Malt',
-    source: 'Curated In-Store Concept Asset',
-    authenticity: 'Artisanal Recipe-Accurate Asset',
-    notes: 'Recent in-store specialty; malt-infused sponge layered with Cadbury milk chocolate frosting.',
-  },
-  {
-    filename: 'molten-lava-cake.webp',
-    productName: 'Molten Lava Cake',
-    source: 'Foodpanda Official Listing',
-    authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Warm chocolate cake with oozing dark chocolate center.',
-  },
+
+  // ── OUR SPECIALTIES (8 items) ──
   {
     filename: 'lotus-tres-leches.webp',
-    productName: 'Tres Leches',
+    productName: 'Lotus Tres Leches',
+    category: 'Our Specialties',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Soaked three-milks sponge with cream cheese, Lotus Biscoff spread and Biscoff biscuit topper.',
+    notes: 'Tres leches milk cake soaked in three milks, crowned with Lotus Biscoff spread.',
   },
   {
     filename: 'ny-cheesecake.webp',
     productName: 'New York Cheesecake',
+    category: 'Our Specialties',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Velvety baked cheesecake slice with golden-baked surface on graham cracker crust.',
+    notes: 'Dense, velvety baked cheesecake slice on buttery graham cracker crust.',
+  },
+  {
+    filename: 'molten-lava-cake.webp',
+    productName: 'Molten Lava Cake',
+    category: 'Our Specialties',
+    source: 'Foodpanda Official Listing',
+    authenticity: 'Genuine Cake Walk Photograph',
+    notes: 'Warm individual dark chocolate cake with a gooey molten center.',
   },
   {
     filename: 'chocolate-fudge-brownie.webp',
     productName: 'Chocolate Fudge Brownie',
+    category: 'Our Specialties',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Square fudgy brownie with thin shiny crinkle crust.',
+    notes: 'Chewy dark chocolate brownie square with paper-thin shiny top crust.',
   },
   {
     filename: 'walnut-brownie.webp',
     productName: 'Walnut Chocolate Brownie',
+    category: 'Our Specialties',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Fudge brownie densely topped with toasted golden walnut halves.',
+    notes: 'Dark chocolate fudge brownie studded with toasted walnut halves.',
   },
   {
     filename: 'lemon-tart.webp',
-    productName: 'Lemon and Chocolate Tart',
+    productName: 'Lemon Tart — one bite',
+    category: 'Our Specialties',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Fluted individual pastry shell with glossy lemon curd.',
+    notes: 'One-bite fluted tart filled with tangy lemon curd.',
   },
   {
     filename: 'apple-pie.webp',
     productName: 'Apple Pie',
+    category: 'Our Specialties',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Deep double-crust pie slice filled with spiced apples in flaky golden crust.',
+    notes: 'Flaky pastry pie with spiced apple filling.',
   },
   {
     filename: 'banana-bread.webp',
     productName: 'Banana Bread',
+    category: 'Our Specialties',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Moist walnut banana loaf slice sealed with purple Cake Walk oval sticker.',
+    notes: 'Baked banana loaf slice with natural spices.',
   },
+
+  // ── COOKIES (2 items) ──
   {
     filename: 'chocolate-chip-cookie.webp',
     productName: 'Chocolate Chip Cookie',
+    category: 'Cookies',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'NYC-style thick golden baked cookie with molten dark chocolate square chunks.',
+    notes: 'Golden NYC-style baked cookie with dark chocolate chunks.',
   },
   {
     filename: 'dark-chocolate-cookie.webp',
     productName: 'Dark Chocolate Cookie',
+    category: 'Cookies',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Double-chocolate cookie with dark cocoa dough, chocolate chunks, and sea salt.',
+    notes: 'Rich double chocolate cookie with deep cocoa crumb.',
   },
-  {
-    filename: 'red-velvet-cookie.webp',
-    productName: 'Red Velvet Cookie',
-    source: 'Curated In-Store Concept Asset',
-    authenticity: 'Artisanal Recipe-Accurate Asset',
-    notes: 'Soft-baked red velvet cookie with white chocolate chips.',
-  },
-  {
-    filename: 'butterscotch-cookie.webp',
-    productName: 'Butterscotch Cookie',
-    source: 'Curated In-Store Concept Asset',
-    authenticity: 'Artisanal Recipe-Accurate Asset',
-    notes: 'Golden butter cookie loaded with butterscotch morsels.',
-  },
+
+  // ── CUPCAKES (5 items) ──
   {
     filename: 'lotus-biscoff-cupcake.webp',
     productName: 'Lotus Biscoff Cupcake',
+    category: 'Cupcakes',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Vanilla cupcake with tall swirl of speculoos frosting and Biscoff crumb dust.',
+    notes: 'Vanilla cupcake with Lotus Biscoff swirl and biscuit crumb.',
   },
   {
     filename: 'nutella-cupcake.webp',
     productName: 'Nutella Cupcake',
+    category: 'Cupcakes',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Moist chocolate cupcake crowned with glossy Nutella swirl.',
+    notes: 'Chocolate cupcake with hazelnut Nutella frosting swirl.',
   },
   {
     filename: 'chocolate-fudge-cupcake.webp',
     productName: 'Chocolate Fudge Cupcake',
+    category: 'Cupcakes',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Rich chocolate cake with whipped dark chocolate ganache and chocolate curls.',
+    notes: 'Cocoa cupcake with dark chocolate fudge swirl.',
   },
   {
     filename: 'oreo-cupcake.webp',
-    productName: 'Oreo Cookies and Cream Cupcake',
+    productName: 'Oreo Cookies n Cream Cupcake',
+    category: 'Cupcakes',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Dark cupcake with Oreo Chantilly cream and whole mini Oreo cookie.',
+    notes: 'Dark cupcake with Oreo Chantilly cream and mini Oreo cookie.',
   },
   {
     filename: 'red-velvet-cupcake.webp',
     productName: 'Red Velvet Cupcake',
+    category: 'Cupcakes',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Scarlet red cake with cream cheese frosting swirl and red velvet crumb dusting.',
+    notes: 'Crimson cupcake with piped cream cheese frosting.',
   },
+
+  // ── BEVERAGES (2 items) ──
   {
     filename: 'hot-chocolate.webp',
     productName: 'Hot Chocolate',
+    category: 'Beverages',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Velvety dark cocoa drink served with miniature white marshmallows.',
+    notes: 'Dark cocoa warm drink with marshmallows in white teacup.',
   },
   {
     filename: 'karak-chai.webp',
     productName: 'Karak Chai',
+    category: 'Beverages',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
-    notes: 'Spiced creamy brown tea with rich froth served in white teacup.',
+    notes: 'Spiced slow-brewed tea with evaporated milk.',
   },
+
+  // ── HERO BANNER ──
   {
     filename: 'hero-banner.webp',
     productName: 'Cake Walk Signature Display',
+    category: 'Hero',
     source: 'Foodpanda Official Listing',
     authenticity: 'Genuine Cake Walk Photograph',
     notes: 'Listing banner featuring branded lavender/purple cup with golden churros, chocolate dip, chocochino and caramel crunch cake.',
+  },
+
+  // ── BESPOKE CELEBRATION CAKES (4 items) ──
+  {
+    filename: 'custom/custom-wedding.webp',
+    productName: 'Bespoke Tiered Celebration Cake',
+    category: 'Celebration Cakes',
+    source: 'Cake Walk Official Instagram',
+    authenticity: 'Genuine Cake Walk Photograph',
+    notes: 'Sourced from Cake Walk Instagram post Dfwa3WLRZRj showcasing handcrafted multi-tiered castle/celebration cake.',
+  },
+  {
+    filename: 'custom/custom-birthday.webp',
+    productName: 'Handcrafted Birthday Celebration Cake',
+    category: 'Celebration Cakes',
+    source: 'Cake Walk Official Instagram',
+    authenticity: 'Genuine Cake Walk Photograph',
+    notes: 'Sourced from Cake Walk Instagram post DfpTD0aDM1d featuring princess birthday celebration tier.',
+  },
+  {
+    filename: 'custom/custom-floral.webp',
+    productName: 'Artisanal Piped Floral Cake',
+    category: 'Celebration Cakes',
+    source: 'Cake Walk Official Instagram',
+    authenticity: 'Genuine Cake Walk Photograph',
+    notes: 'Sourced from Cake Walk Instagram post Dfrdj8QxDGa featuring detailed buttercream piping and celebratory message.',
+  },
+  {
+    filename: 'custom/custom-chocolate.webp',
+    productName: 'Signature Chocochino Celebration Cake',
+    category: 'Celebration Cakes',
+    source: 'Cake Walk Kitchen Photography',
+    authenticity: 'Genuine Cake Walk Photograph',
+    notes: 'Cake Walk signature handcrafted chocochino and chocolate fudge celebration cake with chocolate chunks.',
   },
 ];

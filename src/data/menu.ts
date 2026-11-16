@@ -1,5 +1,5 @@
 // Cake Walk by Aysha — Product catalogue
-// Sourced from official Foodpanda listing (Latest snapshot: 27 items)
+// Sourced from official Foodpanda listing (Verified public catalogue: 24 items)
 // NOTE: Prices and availability should be confirmed by Cake Walk before the website goes live.
 
 export type MenuCategory =
@@ -36,7 +36,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 1,
     name: 'Classic Churros',
-    description: 'Five fresh fluted churro sticks rolled generously in cinnamon sugar.',
+    description: 'Five churro sticks rolled in cinnamon sugar.',
     price: 650,
     isFromPrice: true,
     category: 'churros',
@@ -47,7 +47,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 2,
     name: 'Loaded Churros',
-    description: 'Five churro sticks drizzled with chocolate and caramel, crushed Oreos and cream.',
+    description: 'Five churro sticks with chocolate and caramel drizzle, crushed Oreos and cream.',
     price: 1090,
     isFromPrice: true,
     category: 'churros',
@@ -58,9 +58,9 @@ export const menuItems: MenuItem[] = [
   {
     id: 3,
     name: 'Churro Waffle',
-    description: 'Crispy golden waffle crafted from signature churro batter dusted with cinnamon sugar.',
+    description: 'Crispy waffle with classic churro flavour and cinnamon sugar.',
     price: 599,
-    isFromPrice: false,
+    isFromPrice: true, // FROM Rs. 599 as per verified audit
     category: 'churros',
     image: '/images/products/churro-waffle.webp',
     featured: false,
@@ -78,11 +78,11 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
 
-  // ── CAKES (5 items) ──
+  // ── CAKES (3 items) ──
   {
     id: 5,
-    name: 'Chocochino',
-    description: 'Rich chocolate, freshly brewed coffee and caramel infusion loaded with chocolate chunks.',
+    name: 'Chocochino Cake',
+    description: 'Chocolate, coffee and caramel with chocolate chunks.',
     price: 2990,
     isFromPrice: true,
     category: 'cakes',
@@ -92,8 +92,8 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: 6,
-    name: 'Double Chocolate Fudge',
-    description: 'Decadent multi-layered chocolate cake loaded with chocolate chunks and fudge ganache.',
+    name: 'Double Chocolate Fudge Cake',
+    description: 'Chocolate cake loaded with chocolate chunks.',
     price: 3250,
     isFromPrice: true,
     category: 'cakes',
@@ -103,8 +103,8 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: 7,
-    name: 'Vanilla Caramel Crunch',
-    description: 'Airy vanilla chiffon sponge, smooth caramel frosting, salted caramel drip and honeycomb crunch.',
+    name: 'Vanilla Caramel Crunch Cake',
+    description: 'Vanilla chiffon sponge, caramel frosting and caramel crunch.',
     price: 2550,
     isFromPrice: true,
     category: 'cakes',
@@ -112,45 +112,23 @@ export const menuItems: MenuItem[] = [
     featured: false,
     inStock: true,
   },
+
+  // ── OUR SPECIALTIES (8 items) ──
   {
     id: 8,
-    name: 'Cadbury Malt',
-    description: 'Rich malt-infused chocolate sponge layered with creamy Cadbury milk chocolate frosting.',
-    price: 3250,
-    isFromPrice: true,
-    category: 'cakes',
-    image: '/images/products/cadbury-malt.webp',
-    featured: true,
-    inStock: true,
-  },
-  {
-    id: 9,
-    name: 'Molten Lava Cake',
-    description: 'Warm dark chocolate cake with a luscious, gooey molten chocolate center.',
-    price: 650,
-    isFromPrice: false,
-    category: 'cakes',
-    image: '/images/products/molten-lava-cake.webp',
-    featured: true,
-    inStock: true,
-  },
-
-  // ── OUR SPECIALTIES (7 items) ──
-  {
-    id: 10,
-    name: 'Tres Leches',
-    description: 'Traditional sponge soaked in three rich milks, finished with Lotus Biscoff spread and whipped frosting.',
+    name: 'Lotus Tres Leches',
+    description: 'Sponge soaked in three milks, with Lotus spread and cream cheese frosting.',
     price: 1150,
-    isFromPrice: true,
+    isFromPrice: false, // Fixed Rs. 1,150
     category: 'specialties',
     image: '/images/products/lotus-tres-leches.webp',
     featured: true,
     inStock: true,
   },
   {
-    id: 11,
+    id: 9,
     name: 'New York Cheesecake',
-    description: 'Dense, velvety baked cheesecake on a rich buttery graham cracker crust.',
+    description: 'Creamy cheesecake on a buttery graham cracker crust.',
     price: 950,
     isFromPrice: true,
     category: 'specialties',
@@ -159,9 +137,20 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 12,
+    id: 10,
+    name: 'Molten Lava Cake',
+    description: 'Warm chocolate cake with a gooey centre.',
+    price: 650,
+    isFromPrice: false,
+    category: 'specialties', // Moved into Our Specialties as per audit
+    image: '/images/products/molten-lava-cake.webp',
+    featured: true,
+    inStock: true,
+  },
+  {
+    id: 11,
     name: 'Chocolate Fudge Brownie',
-    description: 'Thick, chewy dark chocolate fudge brownie with a delicate paper-thin shiny crinkle crust.',
+    description: 'Rich chocolate fudge brownie.',
     price: 425,
     isFromPrice: false,
     category: 'specialties',
@@ -170,9 +159,9 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 13,
-    name: 'Walnut Chocolate Brownie',
-    description: 'Classic chocolate fudge brownie topped with generous toasted golden walnut halves.',
+    id: 12,
+    name: 'Walnut Chocolate Fudge Brownie',
+    description: 'Chocolate brownie with toasted walnuts.',
     price: 450,
     isFromPrice: false,
     category: 'specialties',
@@ -181,9 +170,9 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 14,
-    name: 'Lemon and Chocolate Tart',
-    description: 'One-bite buttery fluted tart shell filled with tangy lemon curd and rich chocolate accent.',
+    id: 13,
+    name: 'Lemon Tart — one bite',
+    description: 'Lemon curd in a buttery tart shell.',
     price: 125,
     isFromPrice: false,
     category: 'specialties',
@@ -192,9 +181,9 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 15,
+    id: 14,
     name: 'Apple Pie',
-    description: 'Flaky double-crusted pie packed with tender cinnamon-spiced apple filling.',
+    description: 'Cinnamon-spiced apple filling in a flaky crust.',
     price: 480,
     isFromPrice: false,
     category: 'specialties',
@@ -203,9 +192,9 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 16,
+    id: 15,
     name: 'Banana Bread',
-    description: 'Freshly baked moist banana bread loaf packed with crushed walnuts and warm spices.',
+    description: 'Freshly baked homemade banana bread loaf.',
     price: 750,
     isFromPrice: false,
     category: 'specialties',
@@ -214,11 +203,11 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
 
-  // ── COOKIES (4 items) ──
+  // ── COOKIES (2 items) ──
   {
-    id: 17,
+    id: 16,
     name: 'Chocolate Chip Cookie',
-    description: 'NYC-style thick golden baked cookie studded with molten dark chocolate square chunks.',
+    description: 'Classic chocolate chip cookie with chocolate chunks.',
     price: 290,
     isFromPrice: false,
     category: 'cookies',
@@ -227,9 +216,9 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 18,
+    id: 17,
     name: 'Dark Chocolate Cookie',
-    description: 'Intensely rich double-chocolate cookie crafted with premium dark cocoa and sea salt flakes.',
+    description: 'Rich dark chocolate cookie.',
     price: 290,
     isFromPrice: false,
     category: 'cookies',
@@ -237,34 +226,12 @@ export const menuItems: MenuItem[] = [
     featured: false,
     inStock: true,
   },
-  {
-    id: 19,
-    name: 'Red Velvet Cookie',
-    description: 'Soft-baked vibrant red velvet cookie studded with white chocolate chips and cream cheese swirl.',
-    price: 290,
-    isFromPrice: false,
-    category: 'cookies',
-    image: '/images/products/red-velvet-cookie.webp',
-    featured: false,
-    inStock: true,
-  },
-  {
-    id: 20,
-    name: 'Butterscotch Cookie',
-    description: 'Chewy golden butter cookie loaded with sweet caramelized butterscotch morsels.',
-    price: 290,
-    isFromPrice: false,
-    category: 'cookies',
-    image: '/images/products/butterscotch-cookie.webp',
-    featured: false,
-    inStock: true,
-  },
 
   // ── CUPCAKES (5 items) ──
   {
-    id: 21,
+    id: 18,
     name: 'Lotus Biscoff Cupcake',
-    description: 'Vanilla cupcake crowned with a swirl of Lotus Biscoff buttercream and biscuit crumb.',
+    description: 'Cupcake with Lotus Biscoff swirl and biscuit crumb.',
     price: 490,
     isFromPrice: false,
     category: 'cupcakes',
@@ -273,9 +240,9 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 22,
+    id: 19,
     name: 'Nutella Cupcake',
-    description: 'Moist chocolate sponge filled with hazelnut cream and topped with silky Nutella frosting.',
+    description: 'Moist chocolate cupcake with hazelnut Nutella frosting.',
     price: 490,
     isFromPrice: false,
     category: 'cupcakes',
@@ -284,9 +251,9 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 23,
+    id: 20,
     name: 'Chocolate Fudge Cupcake',
-    description: 'Deep cocoa cupcake finished with whipped dark chocolate ganache and chocolate curls.',
+    description: 'Rich cocoa cupcake with chocolate fudge ganache.',
     price: 390,
     isFromPrice: false,
     category: 'cupcakes',
@@ -295,9 +262,9 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 24,
-    name: 'Oreo Cookies and Cream Cupcake',
-    description: 'Dark cupcake crowned with whipped Oreo Chantilly cream and an Oreo cookie topper.',
+    id: 21,
+    name: 'Oreo Cookies n Cream Cupcake',
+    description: 'Dark cupcake with Oreo cookies and cream frosting.',
     price: 390,
     isFromPrice: false,
     category: 'cupcakes',
@@ -306,9 +273,9 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 25,
+    id: 22,
     name: 'Red Velvet Cupcake',
-    description: 'Classic crimson red velvet cake with creamy vanilla cream cheese frosting.',
+    description: 'Classic crimson red velvet cupcake with cream cheese frosting.',
     price: 390,
     isFromPrice: false,
     category: 'cupcakes',
@@ -319,9 +286,9 @@ export const menuItems: MenuItem[] = [
 
   // ── BEVERAGES (2 items) ──
   {
-    id: 26,
+    id: 23,
     name: 'Hot Chocolate',
-    description: 'Velvety melted Belgian chocolate steamed with whole milk, topped with mini marshmallows.',
+    description: 'Velvety melted chocolate steamed with milk, topped with mini marshmallows.',
     price: 825,
     isFromPrice: false,
     category: 'beverages',
@@ -330,9 +297,9 @@ export const menuItems: MenuItem[] = [
     inStock: true,
   },
   {
-    id: 27,
+    id: 24,
     name: 'Karak Chai',
-    description: 'Traditional slow-brewed spiced tea with evaporated milk and crushed cardamom pods.',
+    description: 'Slow-brewed spiced tea with evaporated milk and crushed cardamom.',
     price: 350,
     isFromPrice: false,
     category: 'beverages',
@@ -342,9 +309,42 @@ export const menuItems: MenuItem[] = [
   },
 ];
 
+// Preserved separate data for unconfirmed items (not active in public catalogue)
+export const unconfirmedItems = [
+  {
+    id: 101,
+    name: 'Cadbury Malt',
+    category: 'cakes',
+    price: 2850,
+    isFromPrice: true,
+    status: 'Pending availability confirmation by Cake Walk',
+  },
+  {
+    id: 102,
+    name: 'Red Velvet Cookie',
+    category: 'cookies',
+    price: 290,
+    isFromPrice: false,
+    status: 'Pending availability confirmation by Cake Walk',
+  },
+  {
+    id: 103,
+    name: 'Butterscotch Cookie',
+    category: 'cookies',
+    price: 290,
+    isFromPrice: false,
+    status: 'Pending availability confirmation by Cake Walk',
+  },
+];
+
 export const featuredItems = menuItems.filter((item) => item.featured);
 
-export function formatPrice(price: number, isFromPrice: boolean): string {
+/**
+ * Returns formatted price string.
+ * Example: `from Rs. 650` (if isFromPrice) or `Rs. 1,150` (fixed price).
+ * Ensures no duplicate "from from" prefixes occur.
+ */
+export function formatPrice(price: number, isFromPrice: boolean = false): string {
   const formatted = `Rs. ${price.toLocaleString('en-PK')}`;
   return isFromPrice ? `from ${formatted}` : formatted;
 }

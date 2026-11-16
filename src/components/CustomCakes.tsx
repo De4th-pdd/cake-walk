@@ -45,28 +45,28 @@ export default function CustomCakes() {
 
   const galleryItems = [
     {
-      title: 'Tiered Floral Elegance',
+      title: 'Tiered Wedding & Milestone Cakes',
       tag: 'Weddings & Engagements',
-      img: '/images/custom/birthday-floral.webp',
-      desc: 'Multi-tiered buttercream sculptures with natural florals, gold leaf, and custom acrylic toppers.',
+      img: '/images/custom/custom-wedding.webp',
+      desc: 'Bespoke multi-tiered celebration and wedding cakes handcrafted for special gatherings in Lahore.',
     },
     {
-      title: 'Vintage Lambeth Piping',
-      tag: 'Classic Milestone Cakes',
-      img: '/images/custom/lambeth-vintage.webp',
-      desc: 'Intricate retro ruffles, delicate pearl beading, and vibrant cocktail cherries.',
+      title: 'Themed Birthday Celebrations',
+      tag: 'Birthdays & Parties',
+      img: '/images/custom/custom-birthday.webp',
+      desc: 'Custom-sculpted celebration cakes crafted to your party theme, color scheme, and guest count.',
     },
     {
-      title: 'Kids & Themed Creations',
-      tag: 'Birthdays & Fantasy',
-      img: '/images/custom/character-kids.webp',
-      desc: 'Custom cartoon, superhero, safari, and princess sculpted tiers handcrafted to your theme.',
+      title: 'Handcrafted Floral & Piped Cakes',
+      tag: 'Milestones & Dinners',
+      img: '/images/custom/custom-floral.webp',
+      desc: 'Artisanal piped buttercream cakes with personalized messages and elegant finishing.',
     },
     {
-      title: 'Artisan Drip & Chocochino',
-      tag: 'Contemporary Chic',
-      img: '/images/custom/drip-chocochino.webp',
-      desc: 'Luscious caramel drips, French macarons, chocolate curls, and customized celebratory lettering.',
+      title: 'Signature Chocochino Creations',
+      tag: 'Special Occasions',
+      img: '/images/custom/custom-chocolate.webp',
+      desc: 'Decadent chocolate fudge and coffee-caramel celebration cakes loaded with chocolate chunks.',
     },
   ];
 
@@ -85,7 +85,7 @@ export default function CustomCakes() {
             Custom Cakes for Special Moments
           </h2>
           <p className="text-white/70 text-sm sm:text-base max-w-2xl mx-auto font-body leading-relaxed">
-            Every celebration deserves a centerpiece as unique as your story. Aysha Salman brings her background in design and baking to sculpt custom masterpieces in Lahore.
+            Every celebration deserves a centerpiece as unique as your story. Aysha Salman crafts bespoke custom cakes for birthdays, weddings, and special milestones in Lahore.
           </p>
           <div className="divider-ornament max-w-xs mx-auto mt-4">
             <span className="text-purple-400 text-lg">✦</span>

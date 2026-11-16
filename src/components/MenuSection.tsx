@@ -44,7 +44,7 @@ export default function MenuSection() {
               Artisan Bakery Menu
             </h2>
             <p className="text-muted text-sm sm:text-base max-w-xl mx-auto font-body mb-6">
-              Handcrafted in small batches daily using pure dairy cream, Belgian chocolates, and freshly fried cinnamon churro dough.
+              Handcrafted in DHA Phase 8, Lahore — from freshly fried cinnamon sugar churros to specialty cakes and desserts.
             </p>
             <div className="divider-ornament max-w-xs mx-auto mb-8">
               <span className="text-purple-600 text-lg">✦</span>
@@ -189,7 +189,7 @@ export default function MenuSection() {
                   <div className="p-4 sm:p-5 pt-0 border-t border-border/40 mt-auto flex items-center justify-between">
                     <div className="flex flex-col">
                       <span className="text-[0.65rem] uppercase tracking-wider text-muted font-bold">
-                        {item.isFromPrice ? 'Starting from' : 'Price'}
+                        Price
                       </span>
                       <span className="font-display text-sm sm:text-base font-extrabold text-purple-900">
                         {formatPrice(item.price, item.isFromPrice)}

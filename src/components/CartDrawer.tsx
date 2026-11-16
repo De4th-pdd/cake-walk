@@ -225,10 +225,10 @@ export default function CartDrawer() {
             {/* Subtotal */}
             <div className="flex items-center justify-between">
               <span className="font-display text-base font-bold text-cocoa-deep">
-                Estimated Subtotal
+                {items.some((i) => i.product.isFromPrice) ? 'Estimated Starting Subtotal' : 'Estimated Subtotal'}
               </span>
               <span className="font-display text-xl text-purple-900 font-extrabold">
-                Rs. {subtotal.toLocaleString('en-PK')}
+                {items.some((i) => i.product.isFromPrice) ? 'from ' : ''}Rs. {subtotal.toLocaleString('en-PK')}
               </span>
             </div>
 

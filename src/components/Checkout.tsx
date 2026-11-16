@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useCart } from '@/context/CartContext';
 import { useLocation, lahorePopularAreas } from '@/context/LocationContext';
-import { generateWhatsAppOrderUrl } from '@/lib/whatsapp';
+import { generateWhatsAppOrderUrl, isValidPakistaniPhone } from '@/lib/whatsapp';
+import { formatPrice } from '@/data/menu';
 import { business } from '@/data/business';
 
 export default function Checkout() {
@@ -49,6 +50,11 @@ export default function Checkout() {
         setErrorMsg('Please enter your complete street / house address for delivery in Lahore.');
         return false;
       }
+    } else {
+      if (!pickupDate || !pickupTime.trim()) {
+        setErrorMsg('Please specify your preferred pickup day and time.');
+        return false;
+      }
     }
     setErrorMsg('');
     return true;
@@ -56,11 +62,15 @@ export default function Checkout() {
 
   const validateStep2 = () => {
     if (!customerName.trim()) {
-      setErrorMsg('Please provide your name.');
+      setErrorMsg('Please enter your full name.');
       return false;
     }
     if (!phone.trim()) {
-      setErrorMsg('Please enter a valid WhatsApp or contact phone number.');
+      setErrorMsg('Please enter your contact phone number.');
+      return false;
+    }
+    if (!isValidPakistaniPhone(phone.trim())) {
+      setErrorMsg('Please enter a valid Pakistani mobile number (e.g. 0321-7805555 or +923217805555).');
       return false;
     }
     setErrorMsg('');
@@ -88,13 +98,14 @@ export default function Checkout() {
   };
 
   const handleFinalOrderSubmit = () => {
-    const fullDeliveryAddress = `${city}, ${area} — ${localAddress.trim()}`;
-
     const whatsappUrl = generateWhatsAppOrderUrl({
       customerName: customerName.trim(),
       phone: phone.trim(),
       method: orderType,
-      address: orderType === 'delivery' ? fullDeliveryAddress : undefined,
+      address: orderType === 'delivery' ? localAddress.trim() : undefined,
+      city: orderType === 'delivery' ? city : undefined,
+      area: orderType === 'delivery' ? area : undefined,
+      pickupBranch: orderType === 'pickup' ? business.address.full : undefined,
       pickupTime: orderType === 'pickup' ? `${pickupDate} (${pickupTime})` : undefined,
       notes: notes.trim() || (email ? `Email: ${email.trim()}` : undefined),
       items: items.map((i) => ({
@@ -401,20 +412,29 @@ export default function Checkout() {
                       <div className="flex flex-col">
                         <span className="font-semibold text-cocoa-deep">{i.product.name}</span>
                         <span className="text-xs text-muted">
-                          Qty: {i.quantity} × Rs. {i.product.price.toLocaleString('en-PK')}
+                          Qty: {i.quantity} × {formatPrice(i.product.price, i.product.isFromPrice)}
                         </span>
                       </div>
                       <span className="font-bold text-cocoa">
-                        Rs. {(i.product.price * i.quantity).toLocaleString('en-PK')}
+                        {i.product.isFromPrice ? 'from ' : ''}Rs. {(i.product.price * i.quantity).toLocaleString('en-PK')}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-3 border-t border-border flex justify-between items-center">
-                  <span className="font-display text-base font-bold text-cocoa-deep">Estimated Subtotal:</span>
+                <div className="pt-3 border-t border-border flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1">
+                  <div>
+                    <span className="font-display text-base font-bold text-cocoa-deep">
+                      {items.some((i) => i.product.isFromPrice) ? 'Estimated Starting Subtotal:' : 'Estimated Subtotal:'}
+                    </span>
+                    {items.some((i) => i.product.isFromPrice) && (
+                      <p className="text-[0.65rem] text-muted italic">
+                        Includes items with starting prices. Final amount confirmed by Cake Walk.
+                      </p>
+                    )}
+                  </div>
                   <span className="font-display text-xl font-extrabold text-purple-900">
-                    Rs. {subtotal.toLocaleString('en-PK')}
+                    {items.some((i) => i.product.isFromPrice) ? 'from ' : ''}Rs. {subtotal.toLocaleString('en-PK')}
                   </span>
                 </div>
               </div>

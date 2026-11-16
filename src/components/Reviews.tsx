@@ -1,30 +1,35 @@
 'use client';
 
+import { business } from '@/data/business';
+
 export default function Reviews() {
   return (
-    <section id="reviews" className="section-padding bg-cream">
-      <div className="max-w-6xl mx-auto">
+    <section id="reviews" className="section-padding bg-cream texture-paper">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-14">
-          <span className="inline-block text-caramel text-sm uppercase tracking-[0.25em] font-body font-semibold mb-3">
-            What Our Customers Say
+          <span className="inline-block text-purple-700 text-xs sm:text-sm uppercase tracking-[0.25em] font-body font-bold mb-3">
+            Public Customer Ratings
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-cocoa-deep mb-4">
-            Loved by Lahore
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-cocoa-deep mb-4 font-bold">
+            Verified Reviews & Community Feedback
           </h2>
-          <div className="divider-ornament max-w-xs mx-auto">
-            <span className="text-caramel text-lg">✦</span>
+          <p className="text-muted text-sm sm:text-base max-w-xl mx-auto font-body">
+            Direct ratings from public listings for Cake Walk in DHA Phase 8, Lahore.
+          </p>
+          <div className="divider-ornament max-w-xs mx-auto mt-4">
+            <span className="text-purple-600 text-lg">✦</span>
           </div>
         </div>
 
         {/* Rating cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {/* Google Reviews */}
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Cake+Walk+DHA+Phase+8+Lahore"
+            href={business.rating.google.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white rounded-2xl p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-hover)] transition-all duration-300 group"
+            className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-border/50 group"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
@@ -36,12 +41,14 @@ export default function Reviews() {
                 </svg>
               </div>
               <div>
-                <p className="font-display text-lg text-cocoa-deep">Google Reviews</p>
-                <p className="text-muted text-xs font-body">79 reviews</p>
+                <p className="font-display text-base font-bold text-cocoa-deep">Google Reviews</p>
+                <p className="text-muted text-xs font-body">DHA Phase 8, Lahore</p>
               </div>
             </div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-display text-3xl text-cocoa-deep font-bold">4.3</span>
+              <span className="font-display text-3xl text-cocoa-deep font-bold">
+                {business.rating.google.score}
+              </span>
               <div className="flex text-amber-400">
                 {'★★★★'.split('').map((_, i) => (
                   <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -53,17 +60,17 @@ export default function Reviews() {
                 </svg>
               </div>
             </div>
-            <p className="text-sm text-caramel font-medium group-hover:underline">
-              Read reviews on Google →
+            <p className="text-xs text-purple-700 font-semibold group-hover:underline">
+              View Google Listing & Reviews →
             </p>
           </a>
 
           {/* Facebook Reviews */}
           <a
-            href="https://www.facebook.com/cakewalkbyaysha/reviews"
+            href={business.rating.facebook.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white rounded-2xl p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-hover)] transition-all duration-300 group"
+            className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-border/50 group"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
@@ -72,12 +79,14 @@ export default function Reviews() {
                 </svg>
               </div>
               <div>
-                <p className="font-display text-lg text-cocoa-deep">Facebook Reviews</p>
-                <p className="text-muted text-xs font-body">90 reviews</p>
+                <p className="font-display text-base font-bold text-cocoa-deep">Facebook Community</p>
+                <p className="text-muted text-xs font-body">Official Page</p>
               </div>
             </div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-display text-3xl text-cocoa-deep font-bold">4.9</span>
+              <span className="font-display text-3xl text-cocoa-deep font-bold">
+                {business.rating.facebook.score}
+              </span>
               <div className="flex text-amber-400">
                 {'★★★★★'.split('').map((_, i) => (
                   <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -86,29 +95,31 @@ export default function Reviews() {
                 ))}
               </div>
             </div>
-            <p className="text-sm text-caramel font-medium group-hover:underline">
-              Read reviews on Facebook →
+            <p className="text-xs text-purple-700 font-semibold group-hover:underline">
+              View Facebook Page & Feedback →
             </p>
           </a>
 
           {/* Restaurant Guru */}
           <a
-            href="https://restaurantguru.com/Cake-Walk-DHA-Phase-8-Lahore"
+            href={business.rating.restaurantGuru.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white rounded-2xl p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-hover)] transition-all duration-300 group sm:col-span-2 lg:col-span-1"
+            className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-border/50 group sm:col-span-2 lg:col-span-1"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center">
                 <span className="text-lg">🍽️</span>
               </div>
               <div>
-                <p className="font-display text-lg text-cocoa-deep">Restaurant Guru</p>
-                <p className="text-muted text-xs font-body">169 votes</p>
+                <p className="font-display text-base font-bold text-cocoa-deep">Restaurant Guru</p>
+                <p className="text-muted text-xs font-body">Public Directory</p>
               </div>
             </div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="font-display text-3xl text-cocoa-deep font-bold">4.0</span>
+              <span className="font-display text-3xl text-cocoa-deep font-bold">
+                {business.rating.restaurantGuru.score}
+              </span>
               <div className="flex text-amber-400">
                 {'★★★★'.split('').map((_, i) => (
                   <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -117,31 +128,16 @@ export default function Reviews() {
                 ))}
               </div>
             </div>
-            <p className="text-sm text-caramel font-medium group-hover:underline">
-              Read reviews on Restaurant Guru →
+            <p className="text-xs text-purple-700 font-semibold group-hover:underline">
+              View Restaurant Guru Listing →
             </p>
           </a>
         </div>
 
-        {/* Popular items */}
-        <div className="text-center">
-          <p className="text-muted font-body text-sm mb-3">Most recommended items by customers:</p>
-          <div className="flex flex-wrap justify-center gap-2">
-            {['Churros', 'Molten Lava Cake', 'Double Chocolate Fudge', 'Cupcakes', 'Ice Cream Cakes'].map((item) => (
-              <span
-                key={item}
-                className="bg-white px-4 py-2 rounded-full text-sm text-cocoa font-medium border border-border/50"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-
         {/* Disclaimer */}
-        <p className="text-center text-muted/60 text-xs font-body mt-8">
-          Ratings sourced from Google, Facebook, and Restaurant Guru as of public listing data.
-          Review counts may vary; check the original platforms for the most current information.
+        <p className="text-center text-muted/70 text-xs font-body mt-4 max-w-xl mx-auto">
+          Ratings sourced from Google, Facebook, and Restaurant Guru public listings for Cake Walk in Lahore.
+          Review counts are omitted due to differing live platform figures.
         </p>
       </div>
     </section>

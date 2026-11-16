@@ -17,13 +17,13 @@ export default function FeaturedProducts() {
           {/* Section header */}
           <div className="text-center mb-14">
             <span className="inline-block text-purple-700 text-xs sm:text-sm uppercase tracking-[0.25em] font-body font-bold mb-3">
-              House Specialties · Lahore Favourite
+              House Specialties · Signature Selection
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-cocoa-deep mb-4 font-bold">
               The Signatures You Came For
             </h2>
             <p className="text-muted text-sm sm:text-base max-w-xl mx-auto font-body mb-4">
-              Our most celebrated creations that established Cake Walk as Lahore&apos;s destination for crispy cinnamon churros and decadent artisan cakes.
+              Handcrafted specialties from our DHA Phase 8 kitchen — from freshly fried cinnamon sugar churros to signature celebration cakes.
             </p>
             <div className="divider-ornament max-w-xs mx-auto">
               <span className="text-purple-600 text-lg">✦</span>
@@ -81,7 +81,7 @@ export default function FeaturedProducts() {
                 <div className="p-6 pt-0 border-t border-border/40 flex items-center justify-between">
                   <div className="flex flex-col">
                     <span className="text-[0.65rem] uppercase tracking-wider text-muted font-bold">
-                      {item.isFromPrice ? 'Starting from' : 'Price'}
+                      Price
                     </span>
                     <span className="font-display text-xl text-purple-900 font-extrabold">
                       {formatPrice(item.price, item.isFromPrice)}

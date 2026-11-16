@@ -18,16 +18,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Cake Walk by Aysha | Premium Bakery & Churros in DHA Phase 8 Lahore',
+  title: 'Cake Walk by Aysha | Handcrafted Churros & Cakes — DHA Phase 8 Lahore',
   description:
-    'Experience Lahore’s favourite handcrafted churros, celebration cakes, Lotus tres leches, molten lava cakes and artisan desserts by Aysha Salman in DHA Phase 8.',
+    'Handcrafted churros, signature celebration cakes, Lotus tres leches, molten lava cakes and artisan desserts by Aysha Salman in DHA Phase 8, Lahore.',
   keywords: [
     'Cake Walk',
     'Cake Walk by Aysha',
     'Churros Lahore',
-    'Best Churros in Pakistan',
     'Bakery DHA Phase 8 Lahore',
-    'Custom Birthday Cakes Lahore',
+    'Custom Celebration Cakes Lahore',
     'Desserts Lahore',
     'Lotus Tres Leches Lahore',
     'Aysha Salman bakery',
@@ -35,28 +34,41 @@ export const metadata: Metadata = {
   authors: [{ name: 'Aysha Salman', url: business.instagramUrl }],
   creator: 'Cake Walk by Aysha',
   publisher: 'Cake Walk by Aysha',
-  metadataBase: new URL('https://cakewalk.com.pk'),
-  alternates: {
-    canonical: '/',
-  },
+  metadataBase: new URL('https://cake-walk-iota.vercel.app'),
+  // Canonical tag intentionally omitted for concept preview to avoid conflicting with cakewalk.com.pk
   openGraph: {
-    title: 'Cake Walk by Aysha | The Churros You Came For. The Cakes You’ll Come Back For.',
+    title: 'Cake Walk by Aysha | Handcrafted Churros & Signature Cakes',
     description:
       'Handcrafted churros, bespoke celebration cakes, and artisan bakery desserts in DHA Phase 8, Lahore. Order for delivery or takeaway via WhatsApp.',
-    url: 'https://cakewalk.com.pk',
+    url: 'https://cake-walk-iota.vercel.app',
     siteName: 'Cake Walk by Aysha',
     locale: 'en_PK',
     type: 'website',
+    images: [
+      {
+        url: '/images/hero-banner.webp',
+        width: 1200,
+        height: 800,
+        alt: 'Cake Walk by Aysha Signature Display',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cake Walk by Aysha | Bakery & Churros Lahore',
     description:
       'Handcrafted churros and signature celebration cakes in DHA Phase 8, Lahore by Aysha Salman.',
+    images: ['/images/hero-banner.webp'],
   },
+  // Set to noindex, nofollow for redesign concept preview
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
   },
 };
 
@@ -71,8 +83,8 @@ export default function RootLayout({
     name: 'Cake Walk by Aysha',
     alternateName: 'Cake Walk',
     description:
-      'Artisanal bakery and dessert cafe famous for churros, custom celebration cakes, Lotus tres leches, and handcrafted sweets in Lahore.',
-    image: 'https://cakewalk.com.pk/images/hero-banner.webp',
+      'Bakery and dessert boutique known for fresh churros, signature cakes, Lotus tres leches, and handcrafted sweets in DHA Phase 8, Lahore.',
+    image: 'https://cake-walk-iota.vercel.app/images/hero-banner.webp',
     founder: {
       '@type': 'Person',
       name: 'Aysha Salman',
@@ -82,7 +94,6 @@ export default function RootLayout({
       streetAddress: '96 Q Street 10, Block Q, Ex Air Avenue',
       addressLocality: 'DHA Phase 8, Lahore',
       addressRegion: 'Punjab',
-      postalCode: '54000',
       addressCountry: 'PK',
     },
     geo: {
@@ -104,27 +115,30 @@ export default function RootLayout({
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Friday', 'Saturday', 'Sunday'],
         opens: '13:00',
-        closes: '24:00',
+        closes: '00:00',
       },
     ],
     sameAs: [
-      'https://www.instagram.com/cakewalkbyaysha/',
-      'https://www.facebook.com/cakewalkbyaysha',
-      'https://restaurantguru.com/Cake-Walk-DHA-Phase-8-Lahore',
+      business.instagramUrl,
+      business.facebookUrl,
+      business.rating.restaurantGuru.url,
     ],
   };
 
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} scroll-smooth`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-body antialiased selection:bg-purple-200 selection:text-purple-950">
+      <body className="antialiased min-h-screen flex flex-col bg-cream text-cocoa selection:bg-purple-200 selection:text-purple-900">
         <LocationProvider>
-          <CartProvider>{children}</CartProvider>
+          <CartProvider>
+            {children}
+          </CartProvider>
         </LocationProvider>
       </body>
     </html>

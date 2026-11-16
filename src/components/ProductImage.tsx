@@ -28,19 +28,15 @@ export default function ProductImage({
   if (hasError) {
     return (
       <div
-        className={`product-placeholder ${className}`}
+        className={`bg-cream flex items-center justify-center border border-border/40 ${className}`}
         role="img"
         aria-label={item.name}
       >
         <div className="text-center p-4">
-          <span className="text-4xl block mb-2">
-            {item.category === 'churros' ? '🥨' :
-             item.category === 'cakes' ? '🎂' :
-             item.category === 'cupcakes' ? '🧁' :
-             item.category === 'cookies' ? '🍪' :
-             item.category === 'beverages' ? '☕' : '⭐'}
+          <span className="font-display text-xs sm:text-sm font-bold text-cocoa-deep block mb-1">
+            Cake Walk
           </span>
-          <span className="text-sm font-display text-muted">{item.name}</span>
+          <span className="text-[0.7rem] sm:text-xs text-muted block font-body">{item.name}</span>
         </div>
       </div>
     );
